@@ -13,11 +13,11 @@ from selenium import webdriver
 from scrapy.xlib.pydispatch import dispatcher
 from scrapy import signals
 
+
 class JobboleSpider(scrapy.Spider):
     name = "jobbole"
     allowed_domains = ["blog.jobbole.com"]
     start_urls = ['http://blog.jobbole.com/all-posts/']
-
 
     # def __init__(self):
     #     self.browser = webdriver.Chrome(executable_path="D:/Temp/chromedriver.exe")
@@ -29,7 +29,7 @@ class JobboleSpider(scrapy.Spider):
     #     print ("spider closed")
     #     self.browser.quit()
 
-    #收集伯乐在线所有404的url以及404页面数
+    # 收集伯乐在线所有404的url以及404页面数
     handle_httpstatus_list = [404]
 
     def __init__(self, **kwargs):
@@ -44,18 +44,22 @@ class JobboleSpider(scrapy.Spider):
         1. 获取文章列表页中的文章url并交给scrapy下载后并进行解析
         2. 获取下一页的url并交给scrapy进行下载， 下载完成后交给parse
         """
-        #解析列表页中的所有文章url并交给scrapy下载后并进行解析
+        # 解析列表页中的所有文章url并交给scrapy下载后并进行解析
         if response.status == 404:
             self.fail_urls.append(response.url)
             self.crawler.stats.inc_value("failed_url")
 
         post_nodes = response.css("#archive .floated-thumb .post-thumb a")
+        #为了二次提取不取extract()
         for post_node in post_nodes:
+            # 图片image的url
             image_url = post_node.css("img::attr(src)").extract_first("")
+            #文章的url
             post_url = post_node.css("::attr(href)").extract_first("")
-            yield Request(url=parse.urljoin(response.url, post_url), meta={"front_image_url":image_url}, callback=self.parse_detail)
+            yield Request(url=parse.urljoin(response.url, post_url), meta={"front_image_url": image_url},
+                          callback=self.parse_detail)
 
-        #提取下一页并交给scrapy进行下载
+        # 提取下一页并交给scrapy进行下载
         next_url = response.css(".next.page-numbers::attr(href)").extract_first("")
         if next_url:
             yield Request(url=parse.urljoin(response.url, post_url), callback=self.parse)
@@ -63,7 +67,7 @@ class JobboleSpider(scrapy.Spider):
     def parse_detail(self, response):
         article_item = JobBoleArticleItem()
 
-        #提取文章的具体字段
+        # 提取文章的具体字段
         # title = response.xpath('//div[@class="entry-header"]/h1/text()').extract_first("")
         # create_date = response.xpath("//p[@class='entry-meta-hide-on-mobile']/text()").extract()[0].strip().replace("·","").strip()
         # praise_nums = response.xpath("//span[contains(@class, 'vote-post-up')]/h10/text()").extract()[0]
@@ -83,7 +87,7 @@ class JobboleSpider(scrapy.Spider):
         # tag_list = [element for element in tag_list if not element.strip().endswith("评论")]
         # tags = ",".join(tag_list)
 
-        #通过css选择器提取字段
+        # 通过css选择器提取字段
         # front_image_url = response.meta.get("front_image_url", "")  #文章封面图
         # title = response.css(".entry-header h1::text").extract()[0]
         # create_date = response.css("p.entry-meta-hide-on-mobile::text").extract()[0].strip().replace("·","").strip()
@@ -123,8 +127,7 @@ class JobboleSpider(scrapy.Spider):
         # article_item["tags"] = tags
         # article_item["content"] = content
 
-
-        #通过item loader加载item
+        # 通过item loader加载item
         front_image_url = response.meta.get("front_image_url", "")  # 文章封面图
         item_loader = ArticleItemLoader(item=JobBoleArticleItem(), response=response)
         item_loader.add_css("title", ".entry-header h1::text")
@@ -139,6 +142,5 @@ class JobboleSpider(scrapy.Spider):
         item_loader.add_css("content", "div.entry")
 
         article_item = item_loader.load_item()
-
 
         yield article_item

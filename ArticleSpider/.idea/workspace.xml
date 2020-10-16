@@ -27,16 +27,38 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Envs/article/Scripts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="douban" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ArticleSpider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ArticleSpider/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ArticleSpider/spiders/douban.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ArticleSpider" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -62,6 +84,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.douban" />
       </list>
     </recent_temporary>
   </component>
@@ -90,6 +113,9 @@
       <workItem from="1581395179052" duration="10291000" />
       <workItem from="1581428433421" duration="504000" />
       <workItem from="1581428957189" duration="747000" />
+      <workItem from="1581475456438" duration="27569000" />
+      <workItem from="1581820521363" duration="442000" />
+      <workItem from="1581820977995" duration="3378000" />
     </task>
     <servers />
   </component>
@@ -97,38 +123,66 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="466" y="0" key="#Notifications" timestamp="1581395941915">
+    <state x="466" y="0" key="#Notifications" timestamp="1581475651621">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="466" y="0" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1581395941915" />
-    <state x="562" y="96" key="FileChooserDialogImpl" timestamp="1581423639416">
+    <state x="466" y="0" key="#Notifications/0.0.1280.680@0.0.1280.680" timestamp="1581475651621" />
+    <state x="358" y="0" key="#douban" timestamp="1581820621972">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="562" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581423639416" />
-    <state width="458" height="201" key="GridCell.Tab.0.bottom" timestamp="1581429005437">
+    <state x="358" y="0" key="#douban/0.0.1280.680@0.0.1280.680" timestamp="1581820621972" />
+    <state x="358" y="0" key="#zhihu" timestamp="1581820637451">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="458" height="201" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581429005437" />
-    <state width="458" height="201" key="GridCell.Tab.0.center" timestamp="1581429005437">
+    <state x="358" y="0" key="#zhihu/0.0.1280.680@0.0.1280.680" timestamp="1581820637451" />
+    <state x="163" y="39" key="FileChooserDialogImpl" timestamp="1581820955014">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="458" height="201" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1581429005437" />
-    <state width="458" height="201" key="GridCell.Tab.0.left" timestamp="1581429005436">
+    <state x="163" y="39" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581820955014" />
+    <state width="922" height="2" key="GridCell.Tab.0.bottom" timestamp="1581772615113">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="458" height="201" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1581429005436" />
-    <state width="458" height="201" key="GridCell.Tab.0.right" timestamp="1581429005437">
+    <state width="922" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581772615113" />
+    <state width="922" height="2" key="GridCell.Tab.0.center" timestamp="1581772615113">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="458" height="201" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1581429005437" />
-    <state x="190" y="0" key="SettingsEditor" timestamp="1581425009441">
+    <state width="922" height="2" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1581772615113" />
+    <state width="922" height="2" key="GridCell.Tab.0.left" timestamp="1581772615113">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="190" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1581425009441" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1581428957945">
+    <state width="922" height="2" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1581772615113" />
+    <state width="922" height="2" key="GridCell.Tab.0.right" timestamp="1581772615113">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1581428957945" />
+    <state width="922" height="2" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1581772615113" />
+    <state width="922" height="2" key="GridCell.Tab.1.bottom" timestamp="1581772615113">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="922" height="2" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581772615113" />
+    <state width="922" height="2" key="GridCell.Tab.1.center" timestamp="1581772615113">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="922" height="2" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1581772615113" />
+    <state width="922" height="2" key="GridCell.Tab.1.left" timestamp="1581772615113">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="922" height="2" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1581772615113" />
+    <state width="922" height="2" key="GridCell.Tab.1.right" timestamp="1581772615113">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="922" height="2" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1581772615113" />
+    <state x="190" y="0" key="SettingsEditor" timestamp="1581736479971">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="190" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1581736479971" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1581820526090">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1581820526090" />
+    <state x="389" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1581602281833">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="389" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1581602281833" />
     <state x="477" y="67" width="672" height="678" key="search.everywhere.popup" timestamp="1581396094965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -139,13 +193,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ArticleSpider/spiders/zhihu.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
+          <line>39</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ArticleSpider$main.coverage" NAME="main Coverage Results" MODIFIED="1581429004372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ArticleSpider$zhihu.coverage" NAME="zhihu Coverage Results" MODIFIED="1581646856128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ArticleSpider/spiders" />
+    <SUITE FILE_PATH="coverage/ArticleSpider$main.coverage" NAME="main Coverage Results" MODIFIED="1581737097562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
